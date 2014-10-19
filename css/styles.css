@@ -1,3 +1,15 @@
+body {
+  /* insert styles here */
+}
+
+h1 {
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
 .container {
   width: 900px;
   margin: 0 auto;
@@ -6,7 +18,7 @@
 .board {
   border: 3px solid black;
   width: 542px;
-  margin: 0 auto;
+  margin: 20px auto 0;
 }
 
 .tile {
@@ -15,4 +27,50 @@
   height: 60px;
   text-align: center;
   box-sizing: border-box;
+}
+
+.prepopulated {
+  background-color: #d3d3d3;
+}
+
+.tile input {
+  width: 10px;
+  border: 0;
+}
+
+.prepopulated input {
+  background-color: #d3d3d3;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  background-image: none;
+  border: 1px solid transparent;
+}
+
+.controls {
+  text-align: center;
+}
+
+.success-message {
+  color: #5cb85c;
+  margin-top: 20px;
+}
+
+.error-message {
+  color: #d9534f;
+  margin-top: 20px;
+}
+
+.btn.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+.check-button {
+  margin-top: 15px;
+  text-align: center;
 }

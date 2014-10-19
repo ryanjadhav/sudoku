@@ -1,26 +1,19 @@
 // Board View
+
 var BoardView = function(model) {
   this.model = model;
   this.$el = $('.board');
-  this.populateBoard();
+  this.prepopulateBoard();
   this.setupListeners();
+};
 
-  this.keyCode = {
-    49: 1,
-    50: 2,
-    51: 3,
-    52: 4,
-    53: 5,
-    54: 6,
-    55: 7,
-    56: 8,
-    59: 9
-  };
-}
-
-BoardView.prototype.populateBoard = function() {
+BoardView.prototype.prepopulateBoard = function() {
   for (var key in this.model.board) {
-    $("#" + key).html(this.model.board[key]);
+    if (this.model.board[key]) {
+      var $tile = $("#" + key);
+      $tile.addClass('prepopulated');
+      $tile.find('input').val(this.model.board[key]).prop('disabled', true);
+    }
   }
 };
 
@@ -38,10 +31,11 @@ BoardView.prototype.onClickTile = function() {
 
 BoardView.prototype.onKeyPress = function() {
   var self = this;
-  $(document).on('keypress', function(event) {
+  this.$el.on('keyup', 'input', function(event) {
+    var $input = $(event.target),
+      id = $input.parent().attr('id'),
+      num = $input.val();
 
-    if (self.$activeTile && self.keyCode[event.keyCode]) {
-      self.$activeTile.html(self.keyCode[event.keyCode]);
-    }
+    self.model.set(id, num);
   });
 };
