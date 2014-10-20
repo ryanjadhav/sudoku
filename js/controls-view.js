@@ -10,7 +10,7 @@ ControlsView.prototype.memoizeUI = function() {
     checkButton: this.$el.find('.check-button'),
     successMessage: this.$el.find('.success-message'),
     errorMessage: this.$el.find('.error-message')
-  }
+  };
 };
 
 ControlsView.prototype.setupListeners = function() {
@@ -35,4 +35,4 @@ ControlsView.prototype.showSuccessMessage = function() {
 ControlsView.prototype.showErrorMessage = function() {
   this.ui.errorMessage.removeClass('hide');
   this.ui.successMessage.addClass('hide');
-}
+};

@@ -6,10 +6,7 @@ var BoardModel = function(sampleBoard) {
 };
 
 BoardModel.prototype.set = function(key, value) {
-  if (value === '') { debugger; }
-  console.log(value);
   this.board[key] = value;
-  console.log('board', this.board[key]);
 };
 
 BoardModel.prototype.checkAllValues = function(values) {
@@ -57,8 +54,6 @@ BoardModel.prototype.checkGroup = function(keys) {
 };
 
 BoardModel.prototype.checkGame = function() {
-  this.checkBoardData();
-
   if (this.checkRow("A") &&
     this.checkRow("B") &&
     this.checkRow("C") &&

@@ -42,7 +42,6 @@ BoardView.prototype.onKeyPress = function() {
     if (num > 9 || num < 1 || isNaN(num) || num === '') {
       $input.val('');
     } else {
-      console.log(num);
       self.model.set(id, num);
     }
   });

@@ -4,8 +4,8 @@
   $(function() {
     window.vent = new EventAggregator();
 
-    boardView = new BoardView(new BoardModel(sample));
-    controlsView = new ControlsView();
+    var boardView = new BoardView(new BoardModel(sample));
+    var controlsView = new ControlsView();
   });
 
 })(jQuery);
