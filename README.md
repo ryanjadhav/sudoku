@@ -19,7 +19,7 @@ This will download the necessary modules to test the code written in this app.
 Simple linting tests are available at:
 
 ```
-grunt test
+npm run test
 ```
 
 Unit tests are available at `mocha.html`
