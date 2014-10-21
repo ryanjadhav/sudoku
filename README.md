@@ -1,4 +1,4 @@
-sudoku
+Sudoku
 ======
 
-a sudoku game
+A (Sudoku Game)[http://en.wikipedia.org/wiki/Sudoku]
