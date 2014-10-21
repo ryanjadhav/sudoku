@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/ryanjadhav/sudoku",
   "devDependencies": {
+    "chai": "^1.9.2",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-csslint": "^0.3.1",

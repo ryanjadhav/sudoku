@@ -82,7 +82,9 @@ BoardModel.prototype.checkGame = function() {
     this.checkGroup(["D7", "D8", "D9", "E7", "E8", "E9", "F7", "F8", "F9"]) &&
     this.checkGroup(["G7", "G8", "G9", "H7", "H8", "H9", "I7", "I8", "I9"])) {
     vent.trigger('game-complete');
+    return true;
   } else {
     vent.trigger('game-error');
+    return false;
   }
 };
